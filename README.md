@@ -4,6 +4,14 @@ Calculate a hashed password for MySQL.
 
 see http://dev.mysql.com/doc/refman/5.6/en/encryption-functions.html#function_password
 
+[![Build Status](https://travis-ci.org/winebarrel/mypasswd.svg?branch=master)](https://travis-ci.org/winebarrel/mypasswd)
+
+## Installation
+
+```
+brew install https://raw.githubusercontent.com/winebarrel/mypasswd/master/homebrew/mypasswd.rb
+```
+
 ## Usage
 
 ```
