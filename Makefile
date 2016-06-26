@@ -18,7 +18,7 @@ dev_dep:
 	go get github.com/stretchr/testify
 
 clean:
-	rm -f mypasswd{,.exe} *.gz *.zip
+	rm -f mypasswd mypasswd.exe *.gz *.zip
 
 package: clean mypasswd
 ifeq ($(GOOS),windows)
