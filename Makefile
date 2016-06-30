@@ -1,7 +1,10 @@
 VERSION = $(shell git tag | tail -n 1)
 GOOS := $(shell go env GOOS)
 GOARCH := $(shell go env GOARCH)
-RUNTIME_GOPATH := $(GOPATH):$(shell pwd)
+RUNTIME_GOPATH := $(shell pwd)
+ifdef GOPATH
+RUNTIME_GOPATH := $(GOPATH):$(RUNTIME_GOPATH)
+endif
 SRC := $(wildcard *.go) $(wildcard src/mypasswd/*.go)
 TEST_SRC := $(wildcard src/mypasswd/*_test.go)
 
