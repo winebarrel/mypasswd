@@ -4,15 +4,14 @@ GOARCH := $(shell go env GOARCH)
 RUNTIME_GOPATH := $(GOPATH):$(shell pwd)
 SRC := $(wildcard *.go) $(wildcard src/mypasswd/*.go)
 TEST_SRC := $(wildcard src/mypasswd/*_test.go)
-CPATH := $(shell mysql_config --include | sed 's/-I//')
 
 all: mypasswd
 
 mypasswd: $(SRC)
-	GOPATH=$(RUNTIME_GOPATH) CPATH=$(CPATH) go build
+	GOPATH=$(RUNTIME_GOPATH) go build
 
 test: $(TEST_SRC)
-	GOPATH=$(RUNTIME_GOPATH) CPATH=$(CPATH) go test -v $(TEST_SRC)
+	GOPATH=$(RUNTIME_GOPATH) go test -v $(TEST_SRC)
 
 dev_dep:
 	go get github.com/stretchr/testify

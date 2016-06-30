@@ -3,7 +3,9 @@ package mypasswd
 /*
 #cgo LDFLAGS: -lmysqlclient
 #include <stdlib.h>
-#include <mysql.h>
+
+void make_scrambled_password(char *to, const char *password);
+void make_scrambled_password_323(char *to, const char *password);
 
 #define CRYPT_MAX_PASSWORD_SIZE_PLUS_BUF 79 * 3
 
