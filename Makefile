@@ -11,7 +11,7 @@ TEST_SRC := $(wildcard src/mypasswd/*_test.go)
 all: mypasswd
 
 mypasswd: $(SRC)
-	GOPATH=$(RUNTIME_GOPATH) go build
+	GOPATH=$(RUNTIME_GOPATH) go build -o mypasswd
 
 test: $(TEST_SRC)
 	GOPATH=$(RUNTIME_GOPATH) go test -v $(TEST_SRC)
