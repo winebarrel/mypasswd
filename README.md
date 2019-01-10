@@ -16,8 +16,6 @@ brew install https://raw.githubusercontent.com/winebarrel/mypasswd/master/homebr
 
 ```
 Usage of mypasswd:
-  -old
-      Returns the value of the pre-4.1 implementation of PASSWORD()
   -p string
       Password string
 

@@ -24,7 +24,6 @@ func readStdin() (string, error) {
 
 func ParseFlag(m *Mypasswd) (err error) {
 	flag.StringVar(&m.Passwd, "p", "", "Password string")
-	flag.BoolVar(&m.Old, "old", false, "Returns the value of the pre-4.1 implementation of PASSWORD()")
 	flag.Parse()
 
 	if m.Passwd == "" {
