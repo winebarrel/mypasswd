@@ -1,11 +1,11 @@
 require 'formula'
 
 class Mypasswd < Formula
-  VERSION = '0.1.1'
+  VERSION = '0.1.2'
 
   homepage 'https://github.com/winebarrel/mypasswd'
-  url "https://github.com/winebarrel/mypasswd/archive/v0.1.1.tar.gz"
-  sha256 '9ce48fcc3e0395de8e1b59bbea0542d853a9c2f4abac2b4da9e7202f929d1517'
+  url "https://github.com/winebarrel/mypasswd/archive/v0.1.2.tar.gz"
+  sha256 '1e0eca8a18956fa4b5f48fbff33ba696e32783ea3711c4498d43074127a4160a'
   version VERSION
   head 'https://github.com/winebarrel/mypasswd.git', :branch => 'master'
   depends_on 'go' => :build
