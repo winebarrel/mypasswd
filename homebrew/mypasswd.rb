@@ -9,6 +9,7 @@ class Mypasswd < Formula
   version VERSION
   head 'https://github.com/winebarrel/mypasswd.git', :branch => 'master'
   depends_on 'go' => :build
+  depends_on 'mysql-connector-c' => :build
 
   def install
     system "make"
